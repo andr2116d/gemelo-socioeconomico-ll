@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --fondo: #f8fafc;
+  --superficie: #ffffff;
+  --texto: #0f172a;
+  --texto-suave: #64748b;
+  --borde: #e2e8f0;
+  --acento: #2563eb;
+}
+
+@theme inline {
+  --color-fondo: var(--fondo);
+  --color-superficie: var(--superficie);
+  --color-texto: var(--texto);
+  --color-texto-suave: var(--texto-suave);
+  --color-borde: var(--borde);
+  --color-acento: var(--acento);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #0b1120;
+    --superficie: #111827;
+    --texto: #e5e7eb;
+    --texto-suave: #94a3b8;
+    --borde: #1f2937;
+    --acento: #3b82f6;
+  }
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* El contenedor del mapa Leaflet necesita altura y un fondo neutro
+   mientras cargan los tiles. */
+.leaflet-container {
+  background: var(--fondo);
+  font-family: inherit;
+  z-index: 0;
+}
+
+/* Barra de scroll sutil, coherente con la estética "laboratorio de datos". */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--borde);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--texto-suave);
+}
