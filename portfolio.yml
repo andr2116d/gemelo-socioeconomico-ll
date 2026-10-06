@@ -1,0 +1,5 @@
+titulo: Gemelo Socioeconómico LL
+orden: 3
+es: Grafo de los 83 distritos de La Libertad con GraphSAGE, comunidades y un simulador de escenarios en vivo.
+en: Graph of La Libertad's 83 districts with GraphSAGE, community detection and a live scenario simulator.
+stack: [PyTorch Geometric, FastAPI, Next.js, Leaflet]
